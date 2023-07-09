@@ -48,11 +48,9 @@ function updatePopup(videoElement) {
 }
 
 document.addEventListener('DOMContentLoaded', async function() {
-  const startButton = document.querySelector("#startButton");
   checkBox = document.querySelector("#onoffSwitch")
   activityQuery()
   checkBox.addEventListener("change", updateExtension)
-  startButton.addEventListener("click", videoQuery);
 });
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
