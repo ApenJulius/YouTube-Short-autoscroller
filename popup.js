@@ -59,4 +59,3 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   }
 });
 
-//https://www.youtube.com/shorts/QyQ8W1nphXE
