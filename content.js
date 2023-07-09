@@ -23,7 +23,7 @@ function applyTimeEventListener() {
 
 function grabVideoData() {
   // Send the video data to the popup.js script
-  console.log(active)
+
   if(videoElement === null) {
     chrome.runtime.sendMessage({ action: 'updatePopup', data: { videoElement, videoTitle } 
     });
@@ -57,7 +57,6 @@ chrome.runtime.onMessage.addListener(async function(request, sender, sendRespons
 function scrollPage() {
     if(!active) return;
     if(Math.abs(videoElement.currentTime - videoElement.duration) < 0.25) {
-        console.log("scrolling")
         document.querySelector("#shorts-container").scrollBy(0, 150)
     }
 }
